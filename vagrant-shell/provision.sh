@@ -18,6 +18,7 @@ yum-config-manager --enable ol7_developer_EPEL
 
 yum makecache fast
 
+yum install dos2unix -y
 yum install terraform -y
 
 cd /tmp
