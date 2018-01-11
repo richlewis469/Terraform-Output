@@ -4,7 +4,9 @@ echo "Executing /vagrant-share/vagrant-terraform/Terraform"
 
 echo "--Remove any trailing \r dos characters--"
 cd /vagrant-share
-find . -type f -exec dos2unix -ascii {} \;
+for i in `find . -type f -print | file -f - | grep -v binary | grep CRLF | sed -e "s/\:.*$//"`; do
+  dos2unix ${i}
+done
 
 echo "--Setup the environment variables--"
 cd /vagrant-share/vagrant-terraform
