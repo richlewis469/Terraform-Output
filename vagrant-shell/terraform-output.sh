@@ -15,7 +15,8 @@ source /vagrant-share/vagrant-terraform/env-vars.sh
 printenv | \
 grep -i TF_VAR | \
 sed '/ocid=/s/\.\.\(.\{10\}\).*/\.\.\1\**************************************************/' | \
-sed '/fingerprint=/s/=\(.\{15\}\).*/=\1**:**:**:**:**:**:**:**:**:**:**/'
+sed '/fingerprint=/s/=\(.\{15\}\).*/=\1**:**:**:**:**:**:**:**:**:**:**/' | \
+sort 
 
 echo "--Run terraform init--"
 terraform init
