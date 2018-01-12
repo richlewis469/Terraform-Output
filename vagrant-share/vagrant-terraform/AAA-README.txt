@@ -1,1 +1,0 @@
-Copy or rename env-vars.sh.git to env-vars.sh
