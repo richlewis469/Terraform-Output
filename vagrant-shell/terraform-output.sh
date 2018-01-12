@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo " "
 echo "Executing /vagrant-share/vagrant-terraform/Terraform"
 
 echo "--Remove any trailing \r dos characters--"
